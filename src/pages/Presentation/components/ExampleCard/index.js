@@ -24,12 +24,12 @@ import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
 function ExampleCard({ image, name, count, pro, ...rest }) {
+  console.log(image);
   const imageTemplate = (
     <MKBox
       bgColor="white"
       borderRadius="xl"
       shadow="lg"
-      minHeight="10rem"
       sx={{
         overflow: "hidden",
         transform: "perspective(999px) rotateX(0deg) translate3d(0, 0, 0)",
@@ -70,10 +70,12 @@ function ExampleCard({ image, name, count, pro, ...rest }) {
       )}
       <MKBox
         component="img"
-        src={image}
+        src={require(`assets/images/${image}`)}
         alt={name}
         width="100%"
         my="auto"
+        minHeight="20rem"
+        minWidth="30rem"
         opacity={pro ? 0.6 : 1}
       />
     </MKBox>

@@ -24,17 +24,17 @@ import MKBox from "components/MKBox";
 import RotatingCard from "examples/Cards/RotatingCard";
 import RotatingCardFront from "examples/Cards/RotatingCard/RotatingCardFront";
 import RotatingCardBack from "examples/Cards/RotatingCard/RotatingCardBack";
-import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 
 // Images
 import bgFront from "assets/images/rotating-card-bg-front.jpeg";
 import bgBack from "assets/images/rotating-card-bg-back.jpeg";
+import { Typography } from "@mui/material";
 
 function Information() {
   return (
     <MKBox component="section" py={6} my={6}>
       <Container>
-        <Grid container item xs={11} spacing={3} alignItems="center" sx={{ mx: "auto" }}>
+        <Grid container item xs={11} spacing={3} sx={{ mx: "auto" }}>
           <Grid item xs={12} lg={4} sx={{ mx: "auto" }}>
             <RotatingCard>
               <RotatingCardFront
@@ -42,58 +42,42 @@ function Information() {
                 icon="touch_app"
                 title={
                   <>
-                    Feel the
+                    Profil Singkat
                     <br />
-                    Material Kit
+                    Taman Wisata Alam Linggarjati
                   </>
                 }
-                description="All the MUI components that you need in a development have been re-design with the new look."
               />
               <RotatingCardBack
                 image={bgBack}
-                title="Discover More"
-                description="You will save a lot of time going from prototyping to full-functional code because all elements are implemented."
+                title="Jelajahi Lebih Dalam?"
+                description="Baca Perjalanan Pembangunan Taman Wisata Alam Linggarjati ."
                 action={{
                   type: "internal",
                   route: "/sections/page-sections/page-headers",
-                  label: "start with header",
+                  label: "Menuju Page Sejarah",
                 }}
               />
             </RotatingCard>
           </Grid>
-          <Grid item xs={12} lg={7} sx={{ ml: "auto" }}>
-            <Grid container spacing={3}>
-              <Grid item xs={12} md={6}>
-                <DefaultInfoCard
-                  icon="content_copy"
-                  title="Full Documentation"
-                  description="Built by developers for developers. Check the foundation and you will find
-                    everything inside our documentation."
-                />
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <DefaultInfoCard
-                  icon="flip_to_front"
-                  title="MUI Ready"
-                  description="The world's most popular react components library for building user interfaces."
-                />
-              </Grid>
-            </Grid>
-            <Grid container spacing={3} sx={{ mt: { xs: 0, md: 6 } }}>
-              <Grid item xs={12} md={6}>
-                <DefaultInfoCard
-                  icon="price_change"
-                  title="Save Time & Money"
-                  description="Creating your design from scratch with dedicated designers can be very expensive. Start with our Design System."
-                />
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <DefaultInfoCard
-                  icon="devices"
-                  title="Fully Responsive"
-                  description="Regardless of the screen size, the website content will naturally fit the given resolution."
-                />
-              </Grid>
+          <Grid item xs={12} sm container>
+            <Grid item xs container direction="column" spacing={2}>
+              <Typography variant="h3" component="h2">
+                <p
+                  style={{
+                    fontSize: "0.5em",
+                    textAlign: "justify",
+                    textJustify: "inter-word",
+                  }}
+                >
+                  Taman linggarjati berada di Desa Linggarjati, Kecamatan Cilimus, Kabupaten
+                  Kuningan, Jawa Barat. Untuk menuju ke sana dari Alun-Alun Kuningan, kamu dapat
+                  mengikuti rute melalui Jalan Aria Kamuning, Jalan Veteran, Jalan Nanggeleng -
+                  Cirahayu, dan Jalan Siliwangi di Cijoho. Setelah 2,5 km berada di Jalan Siliwangi,
+                  lanjutkan perjalanan menuju Bandorasa Wetan dan ikuti Jalan Bandorasa -
+                  Linggarjati hingga kamu sampai di tujuanmu.
+                </p>
+              </Typography>
             </Grid>
           </Grid>
         </Grid>
