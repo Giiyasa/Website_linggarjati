@@ -15,7 +15,7 @@ Instalasi NVM
     
 setelah Itu menginstal Node versi 22 yang di perlukan dengan
 ```bash
-Nvm install 22.0.0
+nvm install 22.0.0
 ```
 
 gunakan node versi 22 nya dengan
