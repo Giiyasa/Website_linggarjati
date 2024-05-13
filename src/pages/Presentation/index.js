@@ -30,6 +30,7 @@ import footerRoutes from "footer.routes";
 
 // Images
 import bgImage from "assets/images/bg3.jpg";
+import CenteredFooter from "examples/Footers/CenteredFooter";
 
 function Presentation() {
   return (
@@ -75,10 +76,7 @@ function Presentation() {
         <Information />
         <DesignBlocks />
         {/* <Pages /> */}
-        <Container sx={{ mt: 6 }}>
-          <BuiltByDevelopers />
-        </Container>
-        <Container>
+        {/* <Container>
           <Grid container spacing={3}>
             <Grid item xs={12} lg={4}>
               <FilledInfoCard
@@ -121,10 +119,10 @@ function Presentation() {
               />
             </Grid>
           </Grid>
-        </Container>
+        </Container> */}
         <Testimonials />
-        <Download />
-        <MKBox pt={18} pb={6}>
+        {/* <Download /> */}
+        {/* <MKBox pt={18} pb={6}>
           <Container>
             <Grid container spacing={3}>
               <Grid item xs={12} lg={5} ml="auto" sx={{ textAlign: { xs: "center", lg: "left" } }}>
@@ -175,10 +173,11 @@ function Presentation() {
               </Grid>
             </Grid>
           </Container>
-        </MKBox>
+        </MKBox> */}
       </Card>
       <MKBox pt={6} px={1} mt={6}>
-        <DefaultFooter content={footerRoutes} />
+        {/* <DefaultFooter content={footerRoutes} /> */}
+        <CenteredFooter />
       </MKBox>
     </>
   );

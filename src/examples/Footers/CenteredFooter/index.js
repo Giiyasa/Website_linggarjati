@@ -77,14 +77,14 @@ function CenteredFooter({ company, links, socials, light }) {
             {renderLinks}
           </Stack>
         </Grid>
-        <Grid item xs={12} lg={8}>
+        {/* <Grid item xs={12} lg={8}>
           <Stack display="flex" direction="row" justifyContent="center" spacing={3} mt={1} mb={3}>
             {renderSocials}
           </Stack>
-        </Grid>
+        </Grid> */}
         <Grid item xs={12} lg={8} sx={{ textAlign: "center" }}>
           <MKTypography variant="body2" color={light ? "white" : "secondary"}>
-            Copyright &copy; {year} Material by{" "}
+            Copyright &copy; {year} by{" "}
             <MKTypography
               component={Link}
               href={href}
@@ -105,7 +105,10 @@ function CenteredFooter({ company, links, socials, light }) {
 
 // Setting default values for the props of CenteredFooter
 CenteredFooter.defaultProps = {
-  company: { href: "https://www.creative-tim.com/", name: "Creative Tim" },
+  company: {
+    // href: "https://www.creative-tim.com/",
+    name: "Taman Wisata Linggarjati",
+  },
   links: [
     { href: "https://www.creative-tim.com/", name: "Company" },
     { href: "https://www.creative-tim.com/presentation", name: "About Us" },

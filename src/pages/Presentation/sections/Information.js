@@ -61,7 +61,7 @@ function Information() {
             </RotatingCard>
           </Grid>
           <Grid item xs={12} sm container>
-            <Grid item xs container direction="column" spacing={2}>
+            <Grid item xs container direction="column" pl={3} spacing={2}>
               <Typography variant="h3" component="h2">
                 <p
                   style={{
@@ -70,12 +70,31 @@ function Information() {
                     textJustify: "inter-word",
                   }}
                 >
-                  Taman linggarjati berada di Desa Linggarjati, Kecamatan Cilimus, Kabupaten
-                  Kuningan, Jawa Barat. Untuk menuju ke sana dari Alun-Alun Kuningan, kamu dapat
-                  mengikuti rute melalui Jalan Aria Kamuning, Jalan Veteran, Jalan Nanggeleng -
-                  Cirahayu, dan Jalan Siliwangi di Cijoho. Setelah 2,5 km berada di Jalan Siliwangi,
-                  lanjutkan perjalanan menuju Bandorasa Wetan dan ikuti Jalan Bandorasa -
-                  Linggarjati hingga kamu sampai di tujuanmu.
+                  Taman Wisata Linggarjati adalah destinasi yang memukau, terletak di kawasan
+                  Cirebon, Jawa Barat. Menyajikan keindahan alam yang memikat dan sejarah yang kaya,
+                  taman ini menawarkan pengalaman yang tak terlupakan bagi pengunjungnya.
+                  Dikelilingi oleh kebun teh yang hijau subur, taman ini memanjakan mata dengan
+                  pemandangan yang memesona. Langit biru yang terbentang luas di atasnya memberikan
+                  kesan damai dan menenangkan.
+                </p>
+                <br />
+                <p style={{ fontSize: "0.5em", textAlign: "justify", textJustify: "inter-word" }}>
+                  Selain keindahan alamnya, Taman Wisata Linggarjati juga memiliki nilai sejarah
+                  yang penting. Tempat ini menjadi saksi bisu dari peristiwa bersejarah, yakni
+                  penandatanganan Perjanjian Linggarjati pada tahun 1946 antara Indonesia dan
+                  Belanda. Pengunjung dapat mengunjungi bangunan bersejarah dan museum yang
+                  menyimpan artefak serta informasi terkait peristiwa tersebut. Bagi para petualang,
+                  taman ini juga menyediakan berbagai kegiatan menarik.
+                </p>
+                <br />
+                <p style={{ fontSize: "0.5em", textAlign: "justify", textJustify: "inter-word" }}>
+                  Mulai dari trekking di sekitar kebun teh, bersepeda menelusuri jalur-jalur indah,
+                  hingga piknik santai di bawah naungan pohon-pohon rindang. Tidak hanya itu, Taman
+                  Wisata Linggarjati juga memiliki fasilitas lengkap seperti area parkir yang luas,
+                  warung makan dengan sajian kuliner khas daerah, serta tempat istirahat yang nyaman
+                  bagi pengunjung. Dengan segala pesonanya, Taman Wisata Linggarjati menjadi
+                  destinasi yang sempurna untuk menghabiskan waktu bersama keluarga, menikmati alam,
+                  serta memahami lebih dalam tentang sejarah dan budaya Indonesia.
                 </p>
               </Typography>
             </Grid>
