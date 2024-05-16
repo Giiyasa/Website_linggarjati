@@ -5,10 +5,7 @@ import Icon from "@mui/material/Icon";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
 // Pages
-import AboutUs from "layouts/pages/landing-pages/about-us";
-import ContactUs from "layouts/pages/landing-pages/contact-us";
-import Author from "layouts/pages/landing-pages/author";
-import SignIn from "layouts/pages/authentication/sign-in";
+import TicketInformation from "pages/LandingPages/TicketInformation";
 
 // Sections
 import PageHeaders from "layouts/sections/page-sections/page-headers";
@@ -29,47 +26,49 @@ import Dropdowns from "layouts/sections/elements/dropdowns";
 import ProgressBars from "layouts/sections/elements/progress-bars";
 import Toggles from "layouts/sections/elements/toggles";
 import Typography from "layouts/sections/elements/typography";
+import Presentation from "pages/Presentation";
 
 const routes = [
-  {
-    name: "Dashboard",
-    icon: <Icon>dashboard</Icon>,
-    columns: 1,
-    rowsPerColumn: 2,
-    route: "/pages",
-    // collapse: [
-    //   {
-    //     name: "landing pages",
-    //     collapse: [
-    //       {
-    //         name: "about us",
-    //         route: "/pages/landing-pages/about-us",
-    //         component: <AboutUs />,
-    //       },
-    //       {
-    //         name: "contact us",
-    //         route: "/pages/landing-pages/contact-us",
-    //         component: <ContactUs />,
-    //       },
-    //       {
-    //         name: "author",
-    //         route: "/pages/landing-pages/author",
-    //         component: <Author />,
-    //       },
-    //     ],
-    //   },
-    //   {
-    //     name: "account",
-    //     collapse: [
-    //       {
-    //         name: "sign in",
-    //         route: "/pages/authentication/sign-in",
-    //         component: <SignIn />,
-    //       },
-    //     ],
-    //   },
-    // ],
-  },
+  // {
+  //   name: "Dashboard",
+  //   icon: <Icon>dashboard</Icon>,
+  //   // columns: 1,
+  //   // rowsPerColumn: 2,
+  //   // route: "/presentation",
+  //   // component: <Presentation />,
+  //   // collapse: [
+  //   //   {
+  //   //     name: "landing pages",
+  //   //     collapse: [
+  //   //       {
+  //   //         name: "about us",
+  //   //         route: "/pages/landing-pages/about-us",
+  //   //         component: <AboutUs />,
+  //   //       },
+  //   //       {
+  //   //         name: "contact us",
+  //   //         route: "/pages/landing-pages/contact-us",
+  //   //         component: <ContactUs />,
+  //   //       },
+  //   //       {
+  //   //         name: "author",
+  //   //         route: "/pages/landing-pages/author",
+  //   //         component: <Author />,
+  //   //       },
+  //   //     ],
+  //   //   },
+  //   //   {
+  //   //     name: "account",
+  //   //     collapse: [
+  //   //       {
+  //   //         name: "sign in",
+  //   //         route: "/pages/authentication/sign-in",
+  //   //         component: <SignIn />,
+  //   //       },
+  //   //     ],
+  //   //   },
+  //   // ],
+  // },
   {
     name: "Sejarah Taman",
     icon: <Icon>book</Icon>,
@@ -77,6 +76,8 @@ const routes = [
   {
     name: "Informasi Ticket",
     icon: <Icon>confirmation_number</Icon>,
+    route: "/pages/ticket_information",
+    component: <TicketInformation />,
   },
   {
     name: "Wisata Dan Fasilitas",

@@ -55,7 +55,14 @@ function Presentation() {
               width="40%"
               mb={10}
             />
-            <MKTypography variant="h1" color="white" mt={-6} mb={1} textAlign="center">
+            <MKTypography
+              fontweight="bold"
+              variant="h1"
+              color="white"
+              mt={-6}
+              mb={1}
+              textAlign="center"
+            >
               TAMAN WISATA ALAM LINGGARJATI
             </MKTypography>
           </Grid>
