@@ -34,11 +34,6 @@ import MKTypography from "components/MKTypography";
 import DefaultReviewCard from "examples/Cards/ReviewCards/DefaultReviewCard";
 
 // Images
-import appleLogo from "assets/images/logos/gray-logos/logo-apple.svg";
-import facebookLogo from "assets/images/logos/gray-logos/logo-facebook.svg";
-import nasaLogo from "assets/images/logos/gray-logos/logo-nasa.svg";
-import vodafoneLogo from "assets/images/logos/gray-logos/logo-vodafone.svg";
-import digitalOceanLogo from "assets/images/logos/gray-logos/logo-digitalocean.svg";
 import { useRef, useState } from "react";
 
 import { useSpring, animated } from "react-spring";
@@ -198,7 +193,13 @@ function Information() {
           </MKTypography>
         </Grid>
         <Grid container spacing={3} sx={{ position: "relative" }}>
-          <Grid item xs={12} lg={4} sx={{ textAlign: "center", position: "relative" }}>
+          <Grid
+            item
+            xs={12}
+            lg={4}
+            justifyContent="center"
+            sx={{ alignItems: "center", position: "relative" }}
+          >
             <svg
               onClick={(e) => handleClick(e, "svg1")}
               width="48"
@@ -208,8 +209,8 @@ function Information() {
               xmlns="http://www.w3.org/2000/svg"
               style={{
                 position: "absolute",
-                top: "470px",
-                left: "350px",
+                top: "350px",
+                left: "450px",
                 zIndex: 1000,
                 cursor: "pointer",
               }}
@@ -228,8 +229,8 @@ function Information() {
               xmlns="http://www.w3.org/2000/svg"
               style={{
                 position: "absolute",
-                top: "300px",
-                left: "500px",
+                top: "250px",
+                left: "600px",
                 zIndex: 1000,
                 cursor: "pointer",
               }}
@@ -248,7 +249,7 @@ function Information() {
               xmlns="http://www.w3.org/2000/svg"
               style={{
                 position: "absolute",
-                top: "250px",
+                top: "230px",
                 left: "800px",
                 zIndex: 1000,
                 cursor: "pointer",
@@ -288,8 +289,8 @@ function Information() {
               xmlns="http://www.w3.org/2000/svg"
               style={{
                 position: "absolute",
-                top: "250px",
-                left: "1100px",
+                top: "230px",
+                left: "1080px",
                 zIndex: 1000,
                 cursor: "pointer",
               }}
@@ -308,8 +309,8 @@ function Information() {
               xmlns="http://www.w3.org/2000/svg"
               style={{
                 position: "absolute",
-                top: "450px",
-                left: "900px",
+                top: "380px",
+                left: "1000px",
                 zIndex: 1000,
                 cursor: "pointer",
               }}
@@ -328,8 +329,8 @@ function Information() {
               xmlns="http://www.w3.org/2000/svg"
               style={{
                 position: "absolute",
-                top: "380px",
-                left: "1200px",
+                top: "330px",
+                left: "1100px",
                 zIndex: 1000,
                 cursor: "pointer",
               }}
@@ -348,7 +349,13 @@ function Information() {
               borderRadius="lg"
               shadow="xl"
               opacity={1}
-              sx={{ ml: "auto", mr: "auto", pointerEvents: "none" }}
+              sx={{
+                ml: "50%",
+                mr: "auto",
+                width: "1000px",
+                height: "auto",
+                pointerEvents: "none",
+              }}
             />
           </Grid>
         </Grid>

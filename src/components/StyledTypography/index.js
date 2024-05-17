@@ -27,7 +27,7 @@ const StyledTypography = styled(Typography)(({}) => ({
   backgroundColor: "333",
   textAlign: "center",
   letterSpacing: "0.5rem",
-  zIndex: 2,
+  zIndex: 10,
 }));
 
 export default StyledTypography;

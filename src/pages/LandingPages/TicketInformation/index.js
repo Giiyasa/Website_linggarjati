@@ -12,7 +12,6 @@ import { useRef, React, useState, useEffect } from "react";
 
 //spring library
 import { useSpring, animated } from "@react-spring/web";
-import { useScroll } from "react-use";
 
 //src image
 import layer1 from "assets/images/information-ticket/1.png";
@@ -25,64 +24,55 @@ import layer7 from "assets/images/information-ticket/7.png";
 import layer8 from "assets/images/information-ticket/8.png";
 import bgImage from "assets/images/information-ticket/Background.png";
 import StyledTypography from "components/StyledTypography";
+import BirdSvg from "components/BirdSVG";
+
+//GSAP Library
 
 const TicketInformation = () => {
   const AnimatedBox = animated(MKBox);
   const initialSpringProps1 = useSpring({
     from: { transform: "translateY(500px)" },
     to: { transform: "translateY(0px) rotate(0deg)" },
-    config: { tension: 170, friction: 26, easing: (t) => t * t }, // ease-in effect
+    config: { tension: 170, friction: 26, easing: (t) => t * t },
     delay: 800,
   });
 
   const initialSpringProps2 = useSpring({
     from: { transform: "translateY(500px)" },
     to: { transform: "translateY(0px) rotate(0deg)" },
-    config: { tension: 170, friction: 26, easing: (t) => t * t }, // ease-in effect
+    config: { tension: 170, friction: 26, easing: (t) => t * t },
     delay: 1000,
   });
 
   const initialSpringProps3 = useSpring({
     from: { transform: "translateY(500px)" },
     to: { transform: "translateY(0px) rotate(0deg)" },
-    config: { tension: 170, friction: 26, easing: (t) => t * t }, // ease-in effect
+    config: { tension: 170, friction: 26, easing: (t) => t * t },
     delay: 1300,
   });
 
   const initialSpringProps4 = useSpring({
     from: { transform: "translateY(500px)" },
     to: { transform: "translateY(0px) rotate(0deg)" },
-    config: { tension: 170, friction: 26, easing: (t) => t * t }, // ease-in effect
-    delay: 1000,
+    config: { tension: 170, friction: 26, easing: (t) => t * t },
+    delay: 1600,
   });
 
   const initialSpringProps5 = useSpring({
     from: { transform: "translateY(500px)" },
     to: { transform: "translateY(0px) rotate(0deg)" },
-    config: { tension: 170, friction: 26, easing: (t) => t * t }, // ease-in effect
-    delay: 1000,
+    config: { tension: 170, friction: 26, easing: (t) => t * t },
+    delay: 1800,
   });
 
   const initialSpringProps6 = useSpring({
     from: { transform: "translateY(500px)" },
     to: { transform: "translateY(0px) rotate(0deg)" },
-    config: { tension: 170, friction: 26, easing: (t) => t * t }, // ease-in effect
-    delay: 1000,
+    config: { tension: 170, friction: 26, easing: (t) => t * t },
+    delay: 2000,
   });
 
-  const initialSpringProps7 = useSpring({
-    from: { transform: "translateY(500px)" },
-    to: { transform: "translateY(0px) rotate(0deg)" },
-    config: { tension: 170, friction: 26, easing: (t) => t * t }, // ease-in effect
-    delay: 1000,
-  });
-
-  const initialSpringProps8 = useSpring({
-    from: { transform: "translateY(500px)" },
-    to: { transform: "translateY(0px) rotate(0deg)" },
-    config: { tension: 170, friction: 26, easing: (t) => t * t }, // ease-in effect
-    delay: 1000,
-  });
+  // efek paralax untuk text
 
   return (
     <>
@@ -98,9 +88,11 @@ const TicketInformation = () => {
           display: "grid",
           placeItems: "center",
           position: "relative",
-          zIndex: "2",
+          zIndex: "9",
+          top: "100%",
         }}
       >
+        <BirdSvg />
         <Container>
           <Grid container item xs={12} lg={15} justifyContent="center" mx="auto">
             <StyledTypography variant="h1">
@@ -162,6 +154,60 @@ const TicketInformation = () => {
               right: "15%",
             }}
           />
+          <AnimatedBox
+            component="img"
+            src={layer4}
+            alt="Ticket"
+            style={{
+              ...initialSpringProps4,
+            }}
+            sx={{
+              width: "auto",
+              height: "auto",
+              zIndex: "5",
+              justifyContent: "center",
+              alignItems: "center",
+              position: "absolute",
+              top: "25%",
+              right: "-21.7%",
+            }}
+          />
+          <AnimatedBox
+            component="img"
+            src={layer5}
+            alt="Ticket"
+            style={{
+              ...initialSpringProps5,
+            }}
+            sx={{
+              width: "auto",
+              height: "auto",
+              zIndex: "4",
+              justifyContent: "center",
+              alignItems: "center",
+              position: "absolute",
+              top: "-40%",
+              right: "-21.7%",
+            }}
+          />
+          <AnimatedBox
+            component="img"
+            src={layer6}
+            alt="Ticket"
+            style={{
+              ...initialSpringProps6,
+            }}
+            sx={{
+              width: "auto",
+              height: "auto",
+              zIndex: "3",
+              justifyContent: "center",
+              alignItems: "center",
+              position: "absolute",
+              top: "50%",
+              right: "60%",
+            }}
+          />
         </Container>
       </MKBox>
       {/* section_2 */}
@@ -178,18 +224,7 @@ const TicketInformation = () => {
           position: "relative",
         }}
       ></MKBox>
-      {/* section_3 */}
-      <MKBox
-        minHeight="100vh"
-        width="100%"
-        sx={{
-          backgroundColor: "#FFC470",
-          backgroundSize: "cover",
-          backgroundPosition: "top",
-          display: "grid",
-          placeItems: "center",
-        }}
-      ></MKBox>
+
       <MKBox pt={6} px={1} mt={6}>
         <CenteredFooter />
       </MKBox>
