@@ -1,11 +1,8 @@
 // @mui material components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import Card from "@mui/material/Card";
 
 import MKBox from "components/MKBox";
-import MKTypography from "components/MKTypography";
-import CenteredFooter from "examples/Footers/CenteredFooter";
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import routes from "routes";
 import { useRef, React, useState, useEffect } from "react";
@@ -20,11 +17,14 @@ import layer3 from "assets/images/information-ticket/3.png";
 import layer4 from "assets/images/information-ticket/4.png";
 import layer5 from "assets/images/information-ticket/5.png";
 import layer6 from "assets/images/information-ticket/6.png";
-import layer7 from "assets/images/information-ticket/7.png";
-import layer8 from "assets/images/information-ticket/8.png";
 import bgImage from "assets/images/information-ticket/Background.png";
+import bgImage2 from "assets/images/information-ticket/bg_section2.jpg";
+
 import StyledTypography from "components/StyledTypography";
 import BirdSvg from "components/BirdSVG";
+import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
+import { Typography } from "@mui/material";
+import PricingCard from "./PricingCard";
 
 //GSAP Library
 
@@ -72,7 +72,36 @@ const TicketInformation = () => {
     delay: 2000,
   });
 
-  // efek paralax untuk text
+  // efek paralax Text
+  const [offsetY, setOffsetY] = useState(0);
+
+  const handleScroll = () => {
+    setOffsetY(window.pageYOffset);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // transisi ke section
+  const pricingOptions = [
+    {
+      title: "Roda Empat",
+      imageSrc: require("assets/images/information-ticket/motor.png"),
+      description: "Rp.20.000.00",
+    },
+    {
+      title: "Roda Dua",
+      imageSrc: require("assets/images/information-ticket/Cars.png"),
+      description: "Rp.15.000.00",
+    },
+    {
+      title: "Pejalan Kaki",
+      imageSrc: require("assets/images/information-ticket/walker.png"),
+      description: "Rp.10.000.00",
+    },
+  ];
 
   return (
     <>
@@ -89,13 +118,21 @@ const TicketInformation = () => {
           placeItems: "center",
           position: "relative",
           zIndex: "9",
-          top: "100%",
+          transition: "background 1s ease-in-out",
         }}
       >
         <BirdSvg />
         <Container>
           <Grid container item xs={12} lg={15} justifyContent="center" mx="auto">
-            <StyledTypography variant="h1">
+            <StyledTypography
+              sx={{
+                transition: "transform 0.5s ease-out",
+                transform: `translateY(${offsetY * 0.3}px)`,
+                position: "relative",
+                zIndex: "5",
+              }}
+              variant="h1"
+            >
               Informasi Ticket Taman Wisata Linggarjati
             </StyledTypography>
           </Grid>
@@ -215,19 +252,36 @@ const TicketInformation = () => {
         minHeight="100vh"
         width="100%"
         sx={{
+          backgroundImage: `url(${bgImage2})`,
           backgroundColor: "#FFC420",
           backgroundSize: "cover",
           backgroundPosition: "top",
           display: "grid",
-          placeItems: "center",
+          placeItems: "start center",
           zIndex: "9",
           position: "relative",
         }}
-      ></MKBox>
-
-      <MKBox pt={6} px={1} mt={6}>
-        <CenteredFooter />
+      >
+        <Typography
+          variant="h1"
+          sx={{
+            textAlign: "center",
+            mt: 35,
+            color: "#FFFFFF",
+            textShadow: "6px 6px 0px rgba(0,0,0,0.2);",
+          }}
+        >
+          Harga Ticket
+        </Typography>
+        <Container sx={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "20px" }}>
+          {pricingOptions.map((option, index) => (
+            <PricingCard key={index} {...option} />
+          ))}
+        </Container>
       </MKBox>
+      {/* <MKBox pt={6} px={1} mt={6}>
+        <CenteredFooter />
+      </MKBox> */}
     </>
   );
 };
