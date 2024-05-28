@@ -170,7 +170,6 @@ function InteractiveMaps() {
         break;
     }
   }
-  
 
   return (
     <MKBox component="section">
@@ -398,7 +397,7 @@ function InteractiveMaps() {
                             sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}
                             aria-label="contacts"
                           >
-                            <ListItem disablePadding onClick={handleCampingGroundClick}>
+                            <ListItem disablePadding>
                               <ListItemButton>
                                 <ListItemIcon>
                                   <StarIcon />
