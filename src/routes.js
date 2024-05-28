@@ -5,7 +5,8 @@ import Icon from "@mui/material/Icon";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
 // Pages
-import TicketInformation from "pages/LandingPages/TicketInformation";
+import TicketInformation from "pages/TicketInformation";
+import Facility from "pages/Facility";
 
 // Sections
 import PageHeaders from "layouts/sections/page-sections/page-headers";
@@ -82,6 +83,8 @@ const routes = [
   {
     name: "Wisata Dan Fasilitas",
     icon: <Icon>park</Icon>,
+    route: "/pages/facility",
+    component: <Facility />,
   },
   // {
   //   name: "sections",

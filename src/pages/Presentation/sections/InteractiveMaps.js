@@ -35,10 +35,9 @@ import DefaultReviewCard from "examples/Cards/ReviewCards/DefaultReviewCard";
 
 // Images
 import { useRef, useState } from "react";
-
 import { useSpring, animated } from "react-spring";
 
-function Information() {
+function InteractiveMaps() {
   const [showText, setShowText] = useState(false);
   const [showBox1, setShowBox1] = useState(false);
   const [showBox2, setShowBox2] = useState(false);
@@ -171,6 +170,7 @@ function Information() {
         break;
     }
   }
+  
 
   return (
     <MKBox component="section">
@@ -398,7 +398,7 @@ function Information() {
                             sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}
                             aria-label="contacts"
                           >
-                            <ListItem disablePadding>
+                            <ListItem disablePadding onClick={handleCampingGroundClick}>
                               <ListItemButton>
                                 <ListItemIcon>
                                   <StarIcon />
@@ -780,4 +780,4 @@ function Information() {
   );
 }
 
-export default Information;
+export default InteractiveMaps;

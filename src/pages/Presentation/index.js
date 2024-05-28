@@ -18,7 +18,7 @@ import Counters from "pages/Presentation/sections/Counters";
 import Information from "pages/Presentation/sections/Information";
 import DesignBlocks from "pages/Presentation/sections/DesignBlocks";
 import Pages from "pages/Presentation/sections/Pages";
-import Testimonials from "pages/Presentation/sections/Testimonials";
+import InteractiveMaps from "pages/Presentation/sections/InteractiveMaps";
 import Download from "pages/Presentation/sections/Download";
 
 // Presentation page components
@@ -127,7 +127,7 @@ function Presentation() {
             </Grid>
           </Grid>
         </Container> */}
-        <Testimonials />
+        <InteractiveMaps />
         {/* <Download /> */}
         {/* <MKBox pt={18} pb={6}>
           <Container>
