@@ -1,30 +1,17 @@
-/*
-=========================================================
-* Material Kit 2 React - v2.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-kit-react
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
-// prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
-
-// @mui material components
+import { useNavigate } from "react-router-dom";
 import Tooltip from "@mui/material/Tooltip";
-
-// Material Kit 2 React components
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
-function ExampleCard({ image, name, count, pro, ...rest }) {
-  console.log(image);
+function ExampleCard({ image, name, count, pro, route, ...rest }) {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    console.log(`Route clicked: http://localhost:3000/pages/facility=${route}`);
+    navigate(`/pages/facility?section=${route}`);
+  };
+
   const imageTemplate = (
     <MKBox
       bgColor="white"
@@ -37,10 +24,14 @@ function ExampleCard({ image, name, count, pro, ...rest }) {
         backfaceVisibility: "hidden",
         willChange: "transform, box-shadow",
         transition: "transform 200ms ease-out",
+        cursor: "pointer",
 
         "&:hover": {
           transform: "perspective(999px) rotateX(7deg) translate3d(0px, -4px, 5px)",
         },
+      }}
+      onClick={() => {
+        handleClick();
       }}
       {...rest}
     >
@@ -121,6 +112,7 @@ ExampleCard.propTypes = {
   name: PropTypes.string,
   count: PropTypes.number,
   pro: PropTypes.bool,
+  route: PropTypes.string.isRequired, // Add route as a required prop
 };
 
 export default ExampleCard;
