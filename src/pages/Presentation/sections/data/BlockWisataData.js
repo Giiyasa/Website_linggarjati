@@ -42,12 +42,12 @@ export default [
         // count: 1,
         route: "berkuda",
       },
-      {
-        image: `bg3.jpg`,
-        name: "Playground",
-        // count: 1,
-        route: "playground",
-      },
+      // {
+      //   image: `bg3.jpg`,
+      //   name: "Playground",
+      //   // count: 1,
+      //   route: "playground",
+      // },
     ],
   },
 ];
