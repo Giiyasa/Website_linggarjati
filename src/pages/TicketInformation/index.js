@@ -308,19 +308,14 @@ const TicketInformation = () => {
           position: "relative",
         }}
       >
-        <FormControlLabel
-          control={
-            <Switch
-              checked={isWeekend}
-              onChange={(e) => setIsWeekend(e.target.checked)}
-              name="weekend"
-              color="primary"
-            />
-          }
-          label="Weekend"
-          sx={{ mb: 4, textAlign: "center", width: "100%" }}
-        />
-        <Container sx={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "20px" }}>
+        <Container
+          sx={{
+            alignItems: "center",
+            display: "grid",
+            gridTemplateColumns: "repeat(3, 1fr)",
+            gap: "20px",
+          }}
+        >
           <Typography
             variant="h2"
             sx={{
@@ -334,6 +329,35 @@ const TicketInformation = () => {
           >
             Harga Ticket
           </Typography>
+          <FormControlLabel
+            control={
+              <Switch
+                checked={isWeekend}
+                onChange={(e) => setIsWeekend(e.target.checked)}
+                name="weekend"
+                color="default"
+                sx={{
+                  "& .MuiSwitch-track": {
+                    backgroundColor: "white",
+                  },
+                  "& .MuiSwitch-thumb": {
+                    backgroundColor: "white",
+                  },
+                }}
+              />
+            }
+            label="Weekend"
+            sx={{
+              textAlign: "center",
+              width: "30%",
+              gridColumn: "span 3",
+              color: "white",
+              borderRadius: "8px",
+              backgroundColor: "rgba(255, 255, 255,100%);",
+              padding: "8px",
+            }}
+          />
+
           {pricingOptionsTicket.map((option, index) => (
             <PricingCardTicket key={index} {...option} />
           ))}
