@@ -20,7 +20,7 @@ import InteractiveMaps from "pages/Presentation/sections/InteractiveMaps";
 import routes from "routes";
 
 // Images
-import bgImage from "assets/images/bg3.jpg";
+import bgImage from "assets/images/Real_pic/background1.JPG";
 import CenteredFooter from "examples/Footers/CenteredFooter";
 import BlockWisata from "./sections/BlockWisata";
 import BlockFasilitas from "./sections/BlockFasilitas";

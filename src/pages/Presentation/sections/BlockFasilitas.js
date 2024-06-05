@@ -65,7 +65,7 @@ const BlockFasilitas = () => {
   ));
 
   return (
-    <MKBox component="section" my={6} py={6}>
+    <MKBox component="section" my={-15} py={6}>
       <DividerWithText text="Fasilitas" />
 
       <Container>

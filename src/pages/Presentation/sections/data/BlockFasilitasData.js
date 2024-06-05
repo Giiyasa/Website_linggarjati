@@ -6,19 +6,19 @@ export default [
     // description: "A selection of 45 page sections that fit perfectly in any combination",
     items: [
       {
-        image: `bg3.jpg`,
+        image: `musola1.JPG`,
         name: "Musholla",
         // count: 1,
         route: "musholla",
       },
       {
-        image: `bg3.jpg`,
+        image: `tempat_makan1.JPG`,
         name: "Tampat Makan",
         // count: 1,
         route: "tampat-makan",
       },
       {
-        image: `bg3.jpg`,
+        image: `camping_ground1.JPG`,
         name: "Camping Ground",
         // count: 1,
         route: "camping-ground",
@@ -31,7 +31,7 @@ export default [
     // description: "A selection of 45 page sections that fit perfectly in any combination",
     items: [
       {
-        image: `bg3.jpg`,
+        image: `parkiran1.JPG`,
         name: "Tempat Parkir",
         // count: 1,
         route: "tempat-parkir",

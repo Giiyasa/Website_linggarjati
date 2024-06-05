@@ -1,16 +1,12 @@
-// @mui material components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-
+import Switch from "@mui/material/Switch";
+import FormControlLabel from "@mui/material/FormControlLabel";
 import MKBox from "components/MKBox";
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import routes from "routes";
 import { useRef, React, useState, useEffect } from "react";
-
-//spring library
 import { useSpring, animated } from "@react-spring/web";
-
-//src image
 import layer1 from "assets/images/information-ticket/1.png";
 import layer2 from "assets/images/information-ticket/2.png";
 import layer3 from "assets/images/information-ticket/3.png";
@@ -19,14 +15,12 @@ import layer5 from "assets/images/information-ticket/5.png";
 import layer6 from "assets/images/information-ticket/6.png";
 import bgImage from "assets/images/information-ticket/Background.png";
 import bgImage2 from "assets/images/information-ticket/bg_section2.jpg";
-
 import StyledTypography from "components/StyledTypography";
 import BirdSvg from "components/BirdSVG";
-import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 import { Typography } from "@mui/material";
-import PricingCard from "./PricingCard";
-
-//GSAP Library
+import PricingCardParkir from "./PricingCardParkir";
+import PricingCardTicket from "./PricingCardTicket";
+import PricingCardWahana from "./PricingCardWahana";
 
 const TicketInformation = () => {
   const AnimatedBox = animated(MKBox);
@@ -84,22 +78,74 @@ const TicketInformation = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // transisi ke section
-  const pricingOptions = [
+  const [isWeekend, setIsWeekend] = useState(false);
+
+  const pricingOptionsTicket = [
+    {
+      title: "Pejalan Kaki",
+      imageSrc: require("assets/images/information-ticket/walker.png"),
+      description: isWeekend ? "Rp.15.000.00" : "Rp.12.500.00",
+    },
+  ];
+
+  const pricingOptionsParkir = [
     {
       title: "Roda Empat",
       imageSrc: require("assets/images/information-ticket/motor.png"),
-      description: "Rp.20.000.00",
+      description: "Rp.15.000.00",
     },
     {
       title: "Roda Dua",
       imageSrc: require("assets/images/information-ticket/Cars.png"),
-      description: "Rp.15.000.00",
+      description: "Rp.9.000.00",
+    },
+  ];
+
+  const pricingOptionsWahana = [
+    {
+      title: "Kolam Renang",
+      imageSrc: require("assets/images/information-ticket/logo_kolam.jpg"),
+      description: "Rp.10.000.00",
     },
     {
-      title: "Pejalan Kaki",
-      imageSrc: require("assets/images/information-ticket/walker.png"),
+      title: "Sepeda Air",
+      imageSrc: require("assets/images/information-ticket/sepeda_air.jpg"),
+      description: "Rp.20.000.00",
+    },
+    {
+      title: "Sepeda Gantung",
+      imageSrc: require("assets/images/information-ticket/sepeda_gantung.jpg"),
+      description: "Rp.20.000.00",
+    },
+    {
+      title: "Sepeda Layang",
+      imageSrc: require("assets/images/information-ticket/sepeda_layang.jpg"),
+      description: "Rp.7.500.00",
+    },
+    {
+      title: "Kereta Api Mini",
+      imageSrc: require("assets/images/information-ticket/kereta_api.jpg"),
       description: "Rp.10.000.00",
+    },
+    {
+      title: "Istana Balon",
+      imageSrc: require("assets/images/information-ticket/instana_balon.jpg"),
+      description: "Rp.10.000.00",
+    },
+    {
+      title: "Outbond Anak",
+      imageSrc: require("assets/images/information-ticket/playground.jpg"),
+      description: "Rp.9.000.00",
+    },
+    {
+      title: "Terapi Ikan",
+      imageSrc: require("assets/images/information-ticket/terapi_ikan.jpg"),
+      description: "Rp.5.000.00",
+    },
+    {
+      title: "Gazebo",
+      imageSrc: require("assets/images/information-ticket/gazebo.jpg"),
+      description: "Free",
     },
   ];
 
@@ -262,26 +308,73 @@ const TicketInformation = () => {
           position: "relative",
         }}
       >
-        <Typography
-          variant="h1"
-          sx={{
-            textAlign: "center",
-            mt: 35,
-            color: "#FFFFFF",
-            textShadow: "6px 6px 0px rgba(0,0,0,0.2);",
-          }}
-        >
-          Harga Ticket
-        </Typography>
+        <FormControlLabel
+          control={
+            <Switch
+              checked={isWeekend}
+              onChange={(e) => setIsWeekend(e.target.checked)}
+              name="weekend"
+              color="primary"
+            />
+          }
+          label="Weekend"
+          sx={{ mb: 4, textAlign: "center", width: "100%" }}
+        />
         <Container sx={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "20px" }}>
-          {pricingOptions.map((option, index) => (
-            <PricingCard key={index} {...option} />
+          <Typography
+            variant="h2"
+            sx={{
+              textAlign: "center",
+              mb: 4,
+              width: "100%",
+              gridColumn: "span 3",
+              color: "#FFFFFF",
+              textShadow: "3px 3px 0px rgba(0,0,0,0.2);",
+            }}
+          >
+            Harga Ticket
+          </Typography>
+          {pricingOptionsTicket.map((option, index) => (
+            <PricingCardTicket key={index} {...option} />
+          ))}
+        </Container>
+        <Container sx={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "20px" }}>
+          <Typography
+            variant="h2"
+            sx={{
+              textAlign: "center",
+              mb: 4,
+              width: "100%",
+              gridColumn: "span 3",
+              color: "#FFFFFF",
+              textShadow: "3px 3px 0px rgba(0,0,0,0.2);",
+            }}
+          >
+            Harga Parkir
+          </Typography>
+          {pricingOptionsParkir.map((option, index) => (
+            <PricingCardParkir key={index} {...option} />
+          ))}
+        </Container>
+        <Container sx={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "20px" }}>
+          <Typography
+            variant="h2"
+            sx={{
+              textAlign: "center",
+              mb: 4,
+              width: "100%",
+              gridColumn: "span 3",
+              color: "#FFFFFF",
+              textShadow: "3px 3px 0px rgba(0,0,0,0.2);",
+            }}
+          >
+            Harga Wahana
+          </Typography>
+          {pricingOptionsWahana.map((option, index) => (
+            <PricingCardWahana key={index} {...option} />
           ))}
         </Container>
       </MKBox>
-      {/* <MKBox pt={6} px={1} mt={6}>
-        <CenteredFooter />
-      </MKBox> */}
     </>
   );
 };

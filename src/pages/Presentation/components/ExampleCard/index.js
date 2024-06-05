@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Tooltip from "@mui/material/Tooltip";
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
+import boxShadow from "assets/theme/functions/boxShadow";
 
 function ExampleCard({ image, name, count, pro, route, ...rest }) {
   const navigate = useNavigate();
@@ -16,7 +17,7 @@ function ExampleCard({ image, name, count, pro, route, ...rest }) {
     <MKBox
       bgColor="white"
       borderRadius="xl"
-      shadow="lg"
+      shadow="xl"
       sx={{
         overflow: "hidden",
         transform: "perspective(999px) rotateX(0deg) translate3d(0, 0, 0)",
@@ -61,7 +62,7 @@ function ExampleCard({ image, name, count, pro, route, ...rest }) {
       )}
       <MKBox
         component="img"
-        src={require(`assets/images/${image}`)}
+        src={require(`assets/images/Real_pic/${image}`)}
         alt={name}
         width="100%"
         my="auto"
