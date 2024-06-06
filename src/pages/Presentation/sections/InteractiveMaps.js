@@ -264,7 +264,7 @@ function InteractiveMaps() {
             </Tooltip>
             <Tooltip title="Camping Ground & PlayGround" placement="top">
               <StyledSvg1
-                id="camping-ground"
+                id="playground"
                 width="48"
                 height="48"
                 viewBox="0 0 24 24"
@@ -364,9 +364,9 @@ function InteractiveMaps() {
                 />
               </StyledSvg6>
             </Tooltip>
-            <Tooltip title="Berkuda & Camping Ground" placement="top">
+            <Tooltip title="Camping Ground & Playground" placement="top">
               <StyledSvg7
-                id="berkuda"
+                id="camping-ground"
                 width="48"
                 height="48"
                 viewBox="0 0 24 24"
@@ -405,7 +405,7 @@ function InteractiveMaps() {
                 height="48"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
-                onClick={handleClickPinpoint}
+                // onClick={handleClickPinpoint}
               >
                 <path
                   d="M 12 0 C 7.316 0 3.429 3.886 3.429 8.57 c 0 3.03 2.194 6.986 7.536 12.379 a 0.749 0.749 0 0 0 1.162 0 c 3.627 -3.714 5.745 -4.528 8.026 -10.425 C 20.571 3.886 16.684 0 12 0 z m 0 12.856 c -2.06 0 -3.715 -1.656 -3.715 -3.715 c 0 -2.06 1.656 -3.715 3.715 -3.715 s 3.715 1.656 3.715 3.715 c 0 2.06 -1.655 3.715 -3.715 3.715 z"
@@ -422,7 +422,7 @@ function InteractiveMaps() {
                 height="48"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
-                onClick={handleClickPinpoint}
+                // onClick={handleClickPinpoint}
               >
                 <path
                   d="M 12 0 C 7.316 0 3.429 3.886 3.429 8.57 c 0 3.03 2.194 6.986 7.536 12.379 a 0.749 0.749 0 0 0 1.162 0 c 3.627 -3.714 5.745 -4.528 8.026 -10.425 C 20.571 3.886 16.684 0 12 0 z m 0 12.856 c -2.06 0 -3.715 -1.656 -3.715 -3.715 c 0 -2.06 1.656 -3.715 3.715 -3.715 s 3.715 1.656 3.715 3.715 c 0 2.06 -1.655 3.715 -3.715 3.715 z"

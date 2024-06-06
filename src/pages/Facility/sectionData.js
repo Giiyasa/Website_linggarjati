@@ -43,7 +43,8 @@ export const sections = [
       { src: "kolam_ikan1.JPG", alt: "kolam ikan 1" },
       { src: "kolam_ikan2.JPG", alt: "kolam ikan 2" },
     ],
-
+  },
+  {
     id: "playground",
     header: "Playground",
     description: [
@@ -89,8 +90,8 @@ export const sections = [
     ],
   },
   {
-    id: "tampat-makan",
-    header: "Tampat Makan",
+    id: "tempat-makan",
+    header: "Tempat Makan",
     description: [
       "Tempat makan yang sejuk di kawasan ini dikelilingi oleh pepohonan rindang, menciptakan suasana nyaman dan asri bagi pengunjung. Beragam jenis makanan tersedia, mulai dari sate, bakso, hingga mie instan, memastikan ada pilihan yang sesuai dengan selera setiap pengunjung. Harga makanan pun terjangkau, dimulai dari 10.000 rupiah, menjadikannya tempat yang ideal untuk beristirahat dan menikmati hidangan lezat setelah beraktivitas.",
     ],

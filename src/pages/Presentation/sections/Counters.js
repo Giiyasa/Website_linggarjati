@@ -38,14 +38,14 @@ function Counters() {
           </Grid>
           <Grid item xs={12} md={4} display="flex">
             <DefaultCounterCard
-              count={13}
+              count={4}
               title="Fasilitas"
               description="Fasilitas yang memadai untuk menunjang kebutuhan pengunjung."
             />
           </Grid>
           <Grid item xs={12} md={4}>
             <DefaultCounterCard
-              count={7}
+              count={4}
               title="Wahana & wisata alam"
               description="Wahana untuk anak anak Kecil dan wisata alam pada taman linggarjati."
             />

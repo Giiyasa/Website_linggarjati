@@ -25,7 +25,6 @@ export default [
       },
     ],
   },
-
   {
     title: "Air Terjun",
     // description: "A selection of 45 page sections that fit perfectly in any combination",

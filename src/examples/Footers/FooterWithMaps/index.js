@@ -37,7 +37,9 @@ const FooterWithMaps = () => {
           <Typography variant="body1">
             Email: tamanlinggarjati@gmail.com
             <br />
-            Nomor HP: +62 812 3456 7890
+            Nomor HP: +62 8815 1443 68 (Bpk.Ozy)
+            <br />
+            Nomor HP: +62 1321 7755 49 (Bpk.Roni)
           </Typography>
         </Box>
         <Box sx={{ flex: 1, display: "flex", justifyContent: "center" }}>

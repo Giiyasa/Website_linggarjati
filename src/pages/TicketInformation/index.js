@@ -78,26 +78,29 @@ const TicketInformation = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const [isWeekend, setIsWeekend] = useState(false);
-
   const pricingOptionsTicket = [
     {
-      title: "Pejalan Kaki",
+      title: "Pejalan Kaki(Weekday)",
       imageSrc: require("assets/images/information-ticket/walker.png"),
-      description: isWeekend ? "Rp.15.000.00" : "Rp.12.500.00",
+      description: "Rp.12.500.00",
+    },
+    {
+      title: "Pejalan Kaki (Weekend)",
+      imageSrc: require("assets/images/information-ticket/walker.png"),
+      description: "Rp.15.000.00",
     },
   ];
 
   const pricingOptionsParkir = [
     {
-      title: "Roda Empat",
+      title: "Roda Dua",
       imageSrc: require("assets/images/information-ticket/motor.png"),
-      description: "Rp.15.000.00",
+      description: "Rp.9.000.00",
     },
     {
-      title: "Roda Dua",
+      title: "Roda Empat",
       imageSrc: require("assets/images/information-ticket/Cars.png"),
-      description: "Rp.9.000.00",
+      description: "Rp.15.000.00",
     },
   ];
 
@@ -329,35 +332,6 @@ const TicketInformation = () => {
           >
             Harga Ticket
           </Typography>
-          <FormControlLabel
-            control={
-              <Switch
-                checked={isWeekend}
-                onChange={(e) => setIsWeekend(e.target.checked)}
-                name="weekend"
-                color="default"
-                sx={{
-                  "& .MuiSwitch-track": {
-                    backgroundColor: "white",
-                  },
-                  "& .MuiSwitch-thumb": {
-                    backgroundColor: "white",
-                  },
-                }}
-              />
-            }
-            label="Weekend"
-            sx={{
-              textAlign: "center",
-              width: "30%",
-              gridColumn: "span 3",
-              color: "white",
-              borderRadius: "8px",
-              backgroundColor: "rgba(255, 255, 255,100%);",
-              padding: "8px",
-            }}
-          />
-
           {pricingOptionsTicket.map((option, index) => (
             <PricingCardTicket key={index} {...option} />
           ))}
