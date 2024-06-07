@@ -53,8 +53,10 @@ export const sections = [
     images: [
       { src: "playground1.JPG", alt: "playground 1" },
       { src: "playground2.JPG", alt: "playground 2" },
+      { src: "balon_1.jpg", alt: "playground 2" },
     ],
   },
+
   // {
   //   id: "berkuda",
   //   header: "Berkuda",

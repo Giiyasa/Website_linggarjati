@@ -36,6 +36,18 @@ export default [
         // count: 1,
         route: "kolam-ikan-dewa",
       },
+      {
+        image: `playground2.JPG`,
+        name: "playground",
+        // count: 1,
+        route: "playground",
+      },
+      {
+        image: `balon_1.jpg`,
+        name: "Istana Balon",
+        // count: 1,
+        route: "playground",
+      },
       // {
       //   image: `bg3.jpg`,
       //   name: "Berkuda",

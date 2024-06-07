@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import Tooltip from "@mui/material/Tooltip";
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
-import boxShadow from "assets/theme/functions/boxShadow";
 
 function ExampleCard({ image, name, count, pro, route, ...rest }) {
   const navigate = useNavigate();
@@ -26,14 +25,14 @@ function ExampleCard({ image, name, count, pro, route, ...rest }) {
         willChange: "transform, box-shadow",
         transition: "transform 200ms ease-out",
         cursor: "pointer",
+        width: "20rem", // Lebar dan tinggi kotak menjadi 1:1 (20rem x 20rem)
+        height: "20rem",
 
         "&:hover": {
           transform: "perspective(999px) rotateX(7deg) translate3d(0px, -4px, 5px)",
         },
       }}
-      onClick={() => {
-        handleClick();
-      }}
+      onClick={handleClick}
       {...rest}
     >
       {pro && (
@@ -65,10 +64,11 @@ function ExampleCard({ image, name, count, pro, route, ...rest }) {
         src={require(`assets/images/Real_pic/${image}`)}
         alt={name}
         width="100%"
+        height="100%"
         my="auto"
-        minHeight="20rem"
-        minWidth="30rem"
-        opacity={pro ? 0.6 : 1}
+        sx={{
+          objectFit: "cover",
+        }}
       />
     </MKBox>
   );
@@ -113,7 +113,7 @@ ExampleCard.propTypes = {
   name: PropTypes.string,
   count: PropTypes.number,
   pro: PropTypes.bool,
-  route: PropTypes.string.isRequired, // Add route as a required prop
+  route: PropTypes.string.isRequired,
 };
 
 export default ExampleCard;

@@ -21,6 +21,7 @@ import { Typography } from "@mui/material";
 import PricingCardParkir from "./PricingCardParkir";
 import PricingCardTicket from "./PricingCardTicket";
 import PricingCardWahana from "./PricingCardWahana";
+import FooterWithMaps from "examples/Footers/FooterWithMaps";
 
 const TicketInformation = () => {
   const AnimatedBox = animated(MKBox);
@@ -324,6 +325,7 @@ const TicketInformation = () => {
             sx={{
               textAlign: "center",
               mb: 4,
+              mt: 20,
               width: "100%",
               gridColumn: "span 3",
               color: "#FFFFFF",
@@ -372,6 +374,9 @@ const TicketInformation = () => {
             <PricingCardWahana key={index} {...option} />
           ))}
         </Container>
+      </MKBox>
+      <MKBox pt={6} px={1} mt={6}>
+        <FooterWithMaps />
       </MKBox>
     </>
   );

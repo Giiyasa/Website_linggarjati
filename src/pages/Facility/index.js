@@ -17,8 +17,8 @@ import routes from "routes";
 import Content from "pages/Facility/Content";
 
 // Images
-import bgImage from "assets/images/bg3.jpg";
-import CenteredFooter from "examples/Footers/CenteredFooter";
+import bgImage from "assets/images/Real_pic/background2.JPG";
+import FooterWithMaps from "examples/Footers/FooterWithMaps";
 
 function Facility() {
   return (
@@ -70,7 +70,7 @@ function Facility() {
         <Content header="Fasilitas Dan Wisata" />
       </Card>
       <MKBox pt={6} px={1} mt={6}>
-        <CenteredFooter />
+        <FooterWithMaps />
       </MKBox>
     </>
   );
